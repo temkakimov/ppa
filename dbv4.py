@@ -1,3 +1,4 @@
+import os
 import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
@@ -180,9 +181,9 @@ scheduler.add_job(send_proactive_messages, CronTrigger(hour=20, minute=0))
 scheduler.start()
 
 # Confidential
-api_id = ''
-api_hash = ''
-bot_token = ''
+api_id = os.getenv('API_ID') 
+api_hash = os.getenv('API_HASH')
+bot_token = os.getenv('BOT_TOKEN')
 
 app = Client("my_bot", api_id=api_id, api_hash=api_hash, bot_token=bot_token)
 
