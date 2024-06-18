@@ -1,0 +1,6 @@
+matplotlib
+numpy
+pandas
+pyrogram
+sqlalchemy
+apscheduler
